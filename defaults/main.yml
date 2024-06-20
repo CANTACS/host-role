@@ -1,0 +1,7 @@
+---
+
+# Set this to true if Netbird is installed on the host
+use_netbird: false
+
+# Set this variable to use a custom folder name throughout the role
+dvm_folder: dvm
