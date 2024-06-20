@@ -1,0 +1,22 @@
+---
+- name: Update and upgrade apt packages
+  ansible.builtin.apt:
+    update_cache: true
+    upgrade: dist
+
+- name: Install required packages for dvmhost
+  ansible.builtin.apt:
+    name:
+      - git
+      - unzip
+      - stm32flash
+      - gcc-arm-none-eabi
+      - gcc
+      - g++
+      - make
+      - build-essential
+      - libasio-dev
+      - libncurses-dev
+      - libssl-dev
+      - dnsutils
+    state: present
