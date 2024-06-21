@@ -116,11 +116,11 @@ system:
             key: {{ hostvars[inventory_hostname]['LLA_Key'] | default("000102030405060708090A0B0C0D0E0F") }}
 
         nac: {{ hostvars[inventory_hostname]['site_nac'] }}
-        pSuperGroup: {{ hostvars[inventory_hostname]['pSuperGroup'] }}
-        announcementGroup: {{ hostvars[inventory_hostname]['announcementGroup'] }}
-        netId: {{ hostvars[inventory_hostname]['WACN'] }}
-        sysId: {{ hostvars[inventory_hostname]['SysID'] }}
-        rfssId: {{ hostvars[inventory_hostname]['RFSS'] }}
+        pSuperGroup: {{ system_pSuperGroup }}
+        announcementGroup: {{ system_announcementGroup }}
+        netId: {{ system_WACN }}
+        sysId: {{ system_SysID }}
+        rfssId: {{ hostvars[inventory_hostname]['RFSS'] | default(1) }}
         siteId: {{ hostvars[inventory_hostname]['SiteID'] }}
 
     cwId:
