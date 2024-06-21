@@ -120,7 +120,7 @@ system:
     cwId:
         enable: {{ hostvars[inventory_hostname]['vc1']['cwId']['enable'] | default(true) }}
         time: {{ hostvars[inventory_hostname]['vc1']['cwId']['time'] | default(15) }}
-        callsign: {{ hostvars[inventory_hostname]['vc1']['cwId']['callsign'] | default(hostvars[inventory_hostname]['WACN']) }}
+        callsign: {{ hostvars[inventory_hostname]['vc1']['cwId']['callsign'] | default(system_WACN) }}
 
     modem:
         protocol:
