@@ -19,23 +19,3 @@
     src: templates/configs/configVC2.yml.j2
     dest: "/opt/{{ dvm_folder }}/configs/configVC2.yml"
   when: dual_voice_channel | bool
-
-- name: Load RID configuration data
-  ansible.builtin.include_vars:
-    file: "{{ rid_config_file }}"
-    name: rid_data
-
-- name: Generate RID configuration from template
-  ansible.builtin.template:
-    src: templates/configs/rid_acl.dat.j2
-    dest: "/opt/{{ dvm_folder }}/configs/rid_acl.dat"
-  vars:
-    ridlist: "{{ rid_data.rid_list }}"
-
-- name: Copy talkgroup_rules.yml to target
-  ansible.builtin.copy:
-    src: "{{ role_path }}/templates/default_configs/talkgroup_rules.yml"
-    dest: "/opt/{{ dvm_folder }}/configs/talkgroup_rules.yml"
-    owner: root
-    group: root
-    mode: '0755'
