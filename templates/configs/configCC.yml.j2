@@ -5,7 +5,7 @@ log:
     fileLevel: {{ hostvars[inventory_hostname]['cc']['fileLevel'] | default(1) }}
     filePath: /var/log/{{ dvm_folder }}/
     activityFilePath: /var/log/{{ dvm_folder }}/
-    fileRoot: {{ hostvars[inventory_hostname]['cc']['fileRoot'] | default(DVM-CC-1) }}
+    fileRoot: {{ hostvars[inventory_hostname]['cc']['fileRoot'] | default("DVM-CC-1") }}
 
 network:
     enable: {{ hostvars[inventory_hostname]['cc']['network_enable'] | default(true) }}
