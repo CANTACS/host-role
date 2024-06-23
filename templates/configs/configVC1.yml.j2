@@ -113,7 +113,7 @@ system:
         pSuperGroup: {{ system_pSuperGroup }}
         announcementGroup: {{ system_announcementGroup }}
         netId: {{ system_WACN }}
-        sysId: {{ system_SysID }}
+        sysId: {{ system_sysId }}
         rfssId: {{ hostvars[inventory_hostname]['RFSS'] | default(1) }}
         siteId: {{ hostvars[inventory_hostname]['SiteID'] }}
 
