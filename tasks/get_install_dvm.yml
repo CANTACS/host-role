@@ -59,7 +59,6 @@
 - name: Remove existing binaries while preserving configs directory
   ansible.builtin.shell:
     cmd: "find /opt/{{ dvm_folder }}/ -mindepth 1 -maxdepth 1 ! -name 'configs' -exec rm -rf {} +"
-  when: install_or_update_dvmhost
 
 - name: Create a temporary directory for extraction
   ansible.builtin.tempfile:
