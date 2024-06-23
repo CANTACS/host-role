@@ -9,7 +9,6 @@ Requires=netbird.service
 [Service]
 User=root
 Type=forking
-ExecStartPre=/opt/{{ dvm_folder }}/fne_initcheck.sh
 ExecStart=/opt/{{ dvm_folder }}/dvmhost -c /opt/{{ dvm_folder }}/configs/config{{ service_status.item }}.yml
 Restart=on-abnormal
 RestartSec=10s
