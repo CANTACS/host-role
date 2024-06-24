@@ -31,10 +31,10 @@ network:
 
 protocols:
     p25:
-        enable: {{ hostvars[inventory_hostname]['p25_enable'] | default(false) }}
+        enable: {{ hostvars[inventory_hostname]['p25_enable'] | default(true) }}
         tduPreambleCount: {{ hostvars[inventory_hostname]['tduPreambleCount'] | default(6) }}
         control:
-            enable: {{ hostvars[inventory_hostname]['vc1']['control']['enable'] | default(true) }}
+            enable: {{ hostvars[inventory_hostname]['vc1']['control']['enable'] | default(false) }}
             ackRequests: {{ hostvars[inventory_hostname]['vc1']['control']['ackRequests'] | default(true) }}
             dedicated: {{ hostvars[inventory_hostname]['vc1']['control']['dedicated'] | default(true) }}
             broadcast: {{ hostvars[inventory_hostname]['vc1']['control']['broadcast'] | default(true) }}
