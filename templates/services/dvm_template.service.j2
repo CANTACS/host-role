@@ -9,6 +9,7 @@ Requires=netbird.service
 [Service]
 User=root
 Type=forking
+ExecStartPre=/bin/sh -c 'until getent hosts {{ hostvars[inventory_hostname]['fne_address'] }}; do sleep 5; done'
 ExecStart=/opt/{{ dvm_folder }}/dvmhost -c /opt/{{ dvm_folder }}/configs/config{{ service_status.item }}.yml
 Restart=on-abnormal
 RestartSec=10s
