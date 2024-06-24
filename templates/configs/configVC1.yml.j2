@@ -36,8 +36,8 @@ protocols:
         control:
             enable: {{ hostvars[inventory_hostname]['vc1']['control']['enable'] | default(false) }}
             ackRequests: {{ hostvars[inventory_hostname]['vc1']['control']['ackRequests'] | default(true) }}
-            dedicated: {{ hostvars[inventory_hostname]['vc1']['control']['dedicated'] | default(true) }}
-            broadcast: {{ hostvars[inventory_hostname]['vc1']['control']['broadcast'] | default(true) }}
+            dedicated: {{ hostvars[inventory_hostname]['vc1']['control']['dedicated'] | default(false) }}
+            broadcast: {{ hostvars[inventory_hostname]['vc1']['control']['broadcast'] | default(false) }}
             interval: {{ hostvars[inventory_hostname]['vc1']['control']['interval'] | default(300) }}
             duration: {{ hostvars[inventory_hostname]['vc1']['control']['duration'] | default(1) }}
             disableTSDUMBF: {{ hostvars[inventory_hostname]['vc1']['control']['disableTSDUMBF'] | default(false) }}
