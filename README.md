@@ -24,4 +24,4 @@ PRs are welcomed if you want to help add support for either of those things.
 
 ## Example Playbook
 
-Please refer to the CANTACS [ansible-deploy repo](https://github.com/CANTACS/ansible-deploy/) repo for a detailed playbook.
+Please refer to the CANTACS [ansible-deploy repo](https://github.com/CANTACS/ansible-deploy/) for a detailed playbook.
