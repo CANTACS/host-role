@@ -22,6 +22,10 @@
 - name: Include configuration generation tasks
   ansible.builtin.include_tasks: generate_configs.yml
 
+- name: Generate new build via GitHub Action
+  ansible.builtin.include_tasks: github_action_run.yml
+  when: rebuild | default(false) | bool
+
 - name: Confirm system architecture
   ansible.builtin.fail:
     msg: "Unsupported architecture"
