@@ -12,8 +12,8 @@ Debian or Ubuntu based system (including a Raspberry Pi), `apt`, and an AMD64, A
 
 | Variable | Description | Default | Required |
 |----------|-------------|---------|----------|
-| use_netbird | Set this to true if Netbird is installed on the host | false | No |
-| dvm_folder | Set this variable to use a custom folder name throughout the role | dvm | No |
+| `use_netbird` | Set this to true if Netbird is installed on the host | `false` | No |
+| `dvm_folder` | Set this variable to use a custom folder name throughout the role | `dvm` | No |
 
 ## Limitations
 
@@ -24,4 +24,4 @@ PRs are welcomed if you want to help add support for either of those things.
 
 ## Example Playbook
 
-Please refer to the CANTACS dvm-deploy repo for a detailed playbook.
+Please refer to the CANTACS [ansible-deploy repo](https://github.com/CANTACS/ansible-deploy/) repo for a detailed playbook.
