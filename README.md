@@ -14,8 +14,8 @@ Debian or Ubuntu based system (including a Raspberry Pi), `apt`, and an AMD64, A
 |----------|-------------|---------|----------|
 | `use_netbird` | Set this to true if Netbird is installed on the host | `false` | No |
 | `dvm_folder` | Set this variable to use a custom folder name throughout the role | `dvm` | No |
-| `rebuild` | Set this variable to force a rebuild using the GitHub action.  Rebuild will happen if the `dvmhost` project had changes since the last action run. | `false` | No |
-| `force_rebuild` | Set this variable to force the GitHub action to rebuild, regardless of whether the `dvmhost` project had changes since the last action run.  **`rebuild` *must* be set to `true` for this variable to be considered.** | `false` | No |
+| `rebuild` | Set this variable to force a rebuild using the GitHub action.  Rebuild will happen if the `dvmhost` project had changes since the last action run. *GitHub token is mandatory.* | `false` | No |
+| `force_rebuild` | Set this variable to force the GitHub action to rebuild, regardless of whether the `dvmhost` project had changes since the last action run.  **`rebuild` *must* be set to `true` for this variable to be considered.** *GitHub token is mandatory.* | `false` | No |
 
 ## Limitations
 
