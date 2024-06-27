@@ -10,7 +10,7 @@
 
 - name: Trigger new GitHub Action run
   ansible.builtin.uri:
-    url: "https://api.github.com/repos/CANTACS/dvm-build/actions/workflows/dvmhost_buildaction.yml/dispatches"
+    url: "https://api.github.com/repos/CANTACS/dvm-build/actions/workflows/dvmhost-build-action.yml/dispatches"
     method: POST
     headers:
       Authorization: "token {{ github_token }}"
